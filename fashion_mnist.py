@@ -7,6 +7,8 @@ import sys
 import pandas as pd 
 
 
+
+
 fashion_mnist=keras.datasets.fashion_mnist
 (train_x,train_y),(test_X,test_y)=fashion_mnist.load_data()
 train_x=train_x/255.0
