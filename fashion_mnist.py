@@ -1,14 +1,16 @@
-import tensorflow as tf     
-import tensorflow.keras as keras 
-import numpy as np          
-import matplotlib as mpl 
-import matplotlib.pyplot as plt 
-import sys 
-import pandas as pd 
+import tensorflow as tf
+import tensorflow.keras as keras
+import numpy as np
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import sys
+import pandas as pd
 
 
 
 
+
+#In[]
 fashion_mnist=keras.datasets.fashion_mnist
 (train_x,train_y),(test_X,test_y)=fashion_mnist.load_data()
 train_x=train_x/255.0
@@ -29,4 +31,3 @@ history=model.fit(train_x,train_y,epochs=10,callbacks=[callbacks])
 model.evaluate(test_X,test_y)
 plt.plot(pd.DataFrame(history.history))
 plt.show()
-
